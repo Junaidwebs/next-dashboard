@@ -6,6 +6,8 @@ import pkr from '@/app/ui/home.module.css';
 import { useState } from 'react';
 import { lusitana } from './ui/fonts';
 import clsx from 'clsx';
+import Image from 'next/image';
+
 export default function Page() {
   const [state, setState] = useState(2);
   let status = 1;
@@ -32,6 +34,22 @@ export default function Page() {
         </div>
         <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
           {/* Add Hero Images Here */}
+          <Image
+          src="/hero-desktop.png"
+          alt='this is an hero image'
+          width={1000}
+          height={760}
+          className='hidden md:block'
+
+          />
+         <Image
+         src='/hero-mobile.png'
+         alt='this is mobile hero image'
+         width={560}
+         height={620}
+         className='block md:hidden'
+          />
+
         </div>
       </div>
       <div   className={clsx(
