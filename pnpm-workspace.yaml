@@ -3,3 +3,4 @@ ignoredBuiltDependencies:
   - sharp
 onlyBuiltDependencies:
   - bcrypt
+  - sharp
