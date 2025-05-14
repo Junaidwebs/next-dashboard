@@ -1,9 +1,7 @@
-"use client"
 import AcmeLogo from '@/app/ui/acme-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import pkr from '@/app/ui/home.module.css';
-import { useState } from 'react';
 import { lusitana } from './ui/fonts';
 import clsx from 'clsx';
 import Image from 'next/image';
@@ -11,8 +9,7 @@ import { fetchRevenue } from './lib/data';
 
 export default async function Page() {
   
-  const [state, setState] = useState(2);
-  let status = 1;
+  let state = 1;
   const revenue = await fetchRevenue();
   return (
     <main className="flex min-h-screen flex-col p-6">
@@ -29,7 +26,7 @@ export default async function Page() {
             , brought to you by Vercel.
           </p>
           <Link
-            href="/dashboard/customers"
+            href="  /dashboard/customers"
             className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
           >
             <span>Log in</span> <ArrowRightIcon className="w-5 md:w-6" />
