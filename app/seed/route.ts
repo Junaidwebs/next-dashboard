@@ -22,6 +22,7 @@ async function seedUsers() {
         INSERT INTO users (id, name, email, password)
         VALUES (${user.id}, ${user.name}, ${user.email}, ${hashedPassword})
         ON CONFLICT (id) DO NOTHING;
+        
       `;
     }),
   );
